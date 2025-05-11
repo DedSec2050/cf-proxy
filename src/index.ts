@@ -6,6 +6,12 @@ export interface Env {
 }
 
 export default {
+	async fetch(request): Promise<Response> {
+    	const corsHeaders = {
+      		"Access-Control-Allow-Origin": "educase.marsalsoren2050.workers.dev,localhost,",
+      		"Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
+     		"Access-Control-Max-Age": "86400",
+        };
 	async fetch(request: Request, env: Env): Promise<Response> {
 		const url = new URL(request.url);
 		const db = drizzle(env.DB);
