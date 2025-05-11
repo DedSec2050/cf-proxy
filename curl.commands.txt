@@ -1,1 +1,0 @@
-curl "http://localhost:8787/list-schools?latitude=12.3&longitude=45.6"
