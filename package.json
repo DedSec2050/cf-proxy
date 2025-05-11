@@ -1,0 +1,29 @@
+{
+	"name": "educase",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"migrate": "drizzle-kit push",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.8.19",
+		"@cloudflare/workers-types": "^4.20250510.0",
+		"@types/express": "^5.0.1",
+		"@types/node": "^22.15.17",
+		"dotenv": "^16.5.0",
+		"drizzle-kit": "^0.31.1",
+		"typescript": "^5.5.2",
+		"vitest": "~3.0.7",
+		"wrangler": "^4.14.4"
+	},
+	"dependencies": {
+		"better-sqlite3": "^11.10.0",
+		"drizzle-orm": "^0.43.1",
+		"express": "^5.1.0"
+	}
+}
